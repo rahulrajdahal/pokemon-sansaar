@@ -4,6 +4,10 @@
 
 **1. Clone the repository**
 
+```sh
+git clone https://github.com/rahulrajdahal/pokemon-sansaar.git
+ ```
+
 **2. Install Dependencies**
 
 **npm**
@@ -28,7 +32,8 @@ npm run preview
 
 ## Preview
 
-[![alt text](./screenshots/pokemon-sansaar.jpg)](https://pokemon-sansaar.netlify.app/)
+[![Pokemon Sansaar](./screenshots/pokemon-sansaar.jpg)](https://pokemon-sansaar.netlify.app/)
+![Pokemon Wartortle](./screenshots/wartortle.jpg)
 
 ## 🚀 Project Structure
 
