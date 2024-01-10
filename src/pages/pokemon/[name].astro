@@ -1,0 +1,71 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import PokemonTab from "../../components/PokemonTab";
+
+const { href, name } = Astro.params;
+// const { name } = Astro.props;
+
+export async function getStaticPaths() {
+  const data = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0").then(
+    (response) => response.json()
+  );
+
+  return data.results.map((pokemon) => {
+    return {
+      params: { name: pokemon.name },
+      props: { pokemon },
+    };
+  });
+}
+
+const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+const pokemon = await response.json();
+
+const pokemonInfo = Object.entries(pokemon)
+  .filter(([key, value]) => typeof value !== "object")
+  .filter(
+    ([key, value]) => key !== "location_area_encounters" && key !== "is_default"
+  );
+
+const pokemonAbilities = pokemon.abilities;
+const pokemonStats = pokemon.stats;
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="px-[12.5%] mt-16 flex">
+    <div class="grid grid-cols-2 gap-2 w-full">
+      {
+        Object.entries(pokemon.sprites)
+          .filter(
+            ([spriteKey, spriteValue]) =>
+              spriteValue !== null &&
+              spriteKey !== "other" &&
+              spriteKey !== "versions"
+          )
+          .map(([spriteKey, spriteValue], i) => (
+            <div
+              class={`h-[10rem] flex items-center justify-center w-full max-w-[20rem] border rounded-md hover:bg-gray-200 border-gray-500`}
+            >
+              <img
+                src={spriteValue as string}
+                alt={spriteKey}
+                width={150}
+                height={60}
+                class={`${i == 0 ? "w-full h-full object-cover" : ""}`}
+              />
+            </div>
+          ))
+      }
+    </div>
+    <div class="w-full">
+      <PokemonTab
+        client:load
+        info={pokemonInfo}
+        stats={pokemonStats}
+        abilities={pokemonAbilities}
+      />
+    </div>
+  </main>
+</Layout>

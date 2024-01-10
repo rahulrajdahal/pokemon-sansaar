@@ -1,0 +1,21 @@
+---
+const links = [
+  { id: 1, href: "pokemon-species", link: "Species" },
+  { id: 2, href: "type", link: "Type" },
+  { id: 3, href: "abilities", link: "Abilities" },
+];
+---
+
+<nav class="flex items-center justify-between bg-white px-[12.5%] py-3 sticky top-0">
+  <h3 class="after:block after:content-['Sansaar']">Pokemon</h3>
+
+  <ul class="flex items-center gap-12">
+    {
+      links.map(({ id, href, link }) => (
+        <li>
+          <a href={href}>{link}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

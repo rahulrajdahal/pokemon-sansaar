@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+export const getStaticPaths = (() => {
+  return [
+    // { params: { slug: "pokemon" } },
+    { params: { slug: "type" } },
+    { params: { slug: "pokemon-species" } },
+    { params: { slug: "abilities" } },
+  ];
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+---
+
+<Layout title={slug}>
+  <h1>{slug}</h1>
+</Layout>

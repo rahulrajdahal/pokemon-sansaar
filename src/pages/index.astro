@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PokemonList from "../components/PokemonList.astro";
+import PokemonList from "../components/PokemonList.tsx";
+import Input from "../components/Input";
+import List from "../components/List.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <PokemonList client:load />
+  <main class="px-[12.5%]">
+    <List />
   </main>
 </Layout>
