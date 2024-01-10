@@ -6,12 +6,16 @@ const links = [
 ];
 ---
 
-<nav class="flex items-center justify-between bg-white px-[12.5%] py-3 sticky top-0">
-  <h3 class="after:block after:content-['Sansaar']">Pokemon</h3>
+<nav
+  class="flex z-50 items-center justify-between bg-white px-4 md:px-[12.5%] py-3 sticky top-0"
+>
+  <a href="/">
+    <h3 class="after:block after:content-['Sansaar']">Pokemon</h3>
+  </a>
 
-  <ul class="flex items-center gap-12">
+  <ul class="flex items-center gap-12 text-sm md:text-base">
     {
-      links.map(({ id, href, link }) => (
+      links.map(({ href, link }) => (
         <li>
           <a href={href}>{link}</a>
         </li>

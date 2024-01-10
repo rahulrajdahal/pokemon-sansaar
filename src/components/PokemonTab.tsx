@@ -38,11 +38,14 @@ export default function PokemonTab({
 
   return (
     <Tabs.Root
-      className="flex flex-col w-full gap-4"
+      className="flex flex-col w-full gap-4 "
       defaultValue={activeTab}
       onValueChange={(value: string) => setActiveTab(value)}
     >
-      <Tabs.List className="flex items-center" aria-label="Manage your account">
+      <Tabs.List
+        className="flex items-center overflow-x-scroll"
+        aria-label="Manage your account"
+      >
         {tabs.map(({ id, tab }) => (
           <Tabs.Trigger
             key={id}

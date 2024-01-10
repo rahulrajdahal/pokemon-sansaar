@@ -1,0 +1,94 @@
+.card-green:hover {
+  color: #dfe8df;
+  background: linear-gradient(
+    294deg,
+    rgb(7, 55, 7) 0%,
+    green 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-brown:hover {
+  color: #dfe8df;
+  background: linear-gradient(
+    294deg,
+    rgb(7, 55, 7) 0%,
+    brown 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-blue:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    blue 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+.card-black:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    black 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-purple:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    purple 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-red:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    red 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-yellow:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    yellow 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-pink:hover {
+  color: #dfe8df;
+  background: linear-gradient(
+    294deg,
+    rgb(22, 1, 19) 0%,
+    pink 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
+
+.card-gray:hover {
+  color: #dfe8df;
+
+  background: linear-gradient(
+    294deg,
+    rgba(7, 55, 7) 0%,
+    gray 82%,
+    rgba(139, 222, 139, 0.57) 100%
+  );
+}
